@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+#define END return 0
+void func(){}
+template<typename t,typename... Args>
+void func(t x,Args... args)
+{
+   cout<<x<<endl;
+   func(args...);
+}
+int main()
+{
+  func("siva",1.2f,2,3);
+  END;
+}
